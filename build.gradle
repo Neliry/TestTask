@@ -1,0 +1,39 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version "$springBootVersion"
+	id 'io.spring.dependency-management' version '1.1.0'
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '17'
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation "org.springframework.boot:spring-boot-starter-web:$springBootVersion"
+	implementation "org.springframework.boot:spring-boot-starter-validation:$springBootVersion"
+	implementation "org.springframework.boot:spring-boot-starter-data-mongodb:$springBootVersion"
+	implementation "org.springframework.boot:spring-boot-starter-security:$springBootVersion"
+	implementation "org.mapstruct:mapstruct:$mapstructVersion"
+	implementation 'jakarta.xml.bind:jakarta.xml.bind-api:4.0.0'
+	implementation "io.jsonwebtoken:jjwt-api:$jsonwebtokenVersion"
+	implementation "io.jsonwebtoken:jjwt-gson:$jsonwebtokenVersion"
+	runtimeOnly "io.jsonwebtoken:jjwt-impl:$jsonwebtokenVersion"
+	compileOnly 'org.projectlombok:lombok:1.18.26'
+	developmentOnly "org.springframework.boot:spring-boot-devtools:$springBootVersion"
+	annotationProcessor 'org.projectlombok:lombok'
+	annotationProcessor "org.mapstruct:mapstruct-processor:$mapstructVersion"
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
