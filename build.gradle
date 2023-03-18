@@ -23,6 +23,7 @@ dependencies {
     implementation 'org.jetbrains.kotlin:kotlin-reflect:1.8.10'
     implementation 'org.postgresql:postgresql:42.5.4'
     implementation 'org.flywaydb:flyway-core:9.16.0'
+    implementation 'com.googlecode.libphonenumber:libphonenumber:8.13.7'
     testImplementation "org.springframework.boot:spring-boot-starter-test:$springBootVersion"
 }
 
