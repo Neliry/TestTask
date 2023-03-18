@@ -7,8 +7,8 @@ import demo.utils.CustomerInfoFormatter.formatEmail
 import demo.utils.CustomerInfoFormatter.formatPhoneNumber
 
 fun CustomerCreateDto.toEntity() = CustomerEntity(
-    firstName = firstName,
-    lastName = lastName,
+    firstName = firstName.trim(),
+    lastName = lastName.trim(),
     phoneNumber = formatPhoneNumber(phoneNumber),
     email = formatEmail(email),
     app = app,
