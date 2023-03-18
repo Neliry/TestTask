@@ -7,5 +7,6 @@ object ErrorMessages {
     const val EMAIL_IS_BLANK = "Email must not be blank"
     const val EMAIL_IS_INVALID = "Email must be well-formed"
 
+    const val CUSTOMER_NOT_FOUND = "Customer not found"
     const val CUSTOMER_ALREADY_EXISTS = "Customer already exists"
 }
